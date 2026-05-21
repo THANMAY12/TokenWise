@@ -1,8 +1,8 @@
-# StackSpend
+# TokenWise
 
-StackSpend is an AI spend optimization platform that helps startups identify unnecessary AI SaaS and API expenses across tools like ChatGPT, Claude, Cursor, Gemini, and GitHub Copilot.
+TokenWise is an AI spend optimization platform that helps startups identify unnecessary AI SaaS and API expenses across tools like ChatGPT, Claude, Cursor, Gemini, and GitHub Copilot.
 
-The platform analyzes current plans, team size, and monthly spend to generate actionable cost-saving recommendations and personalized audit summaries.
+The platform analyzes a company’s AI stack, pricing plans, team size, and monthly usage to generate actionable cost-saving recommendations, optimization insights, and personalized audit summaries.
 
 ## Tech Stack
 
@@ -13,4 +13,5 @@ The platform analyzes current plans, team size, and monthly spend to generate ac
 - Anthropic API
 
 ## Status
-Currently in development.
+
+🚧 Currently in development.
