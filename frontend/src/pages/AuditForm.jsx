@@ -4,8 +4,18 @@ import ToolCard from "../components/ToolCard";
 import ToolSelector from "../components/ToolSelector";
 import { pricingData } from "../data/pricingData";
 function AuditForm() {
-  const [selectedTools, setSelectedTools] =
-    useState(["chatgpt"]);
+  const [selectedTools, setSelectedTools] = useState(["chatgpt"]);
+  const [formData, setFormData] = useState({});
+  const updateToolData = (
+    toolKey,
+    field,
+    value
+  ) => {
+
+    setFormData((prev) => ({
+      ...prev, [toolKey]: { ...prev[toolKey], [field]: value, },
+    }));
+  };
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -21,13 +31,15 @@ function AuditForm() {
         <ToolSelector
           tools={pricingData}
           selectedTools={selectedTools}
-          setSelectedTools={setSelectedTools}
-        />
+          setSelectedTools={setSelectedTools}/>
         <div className="grid md:grid-cols-2 gap-6">
           {selectedTools.map((toolKey) => (
             <ToolCard
               key={toolKey}
+              toolKey={toolKey}
               tool={pricingData[toolKey]}
+              formData={formData}
+              updateToolData={updateToolData}
             />
           ))}
         </div>
