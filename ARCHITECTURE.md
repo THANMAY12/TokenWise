@@ -14,6 +14,20 @@
 ### Database
 - Supabase
 
+## Frontend Architecture
+
+The frontend uses a modular React component architecture with centralized state management inside the audit workflow.
+
+### Key Components
+
+- `ToolSelector` — dynamically selects AI tools for analysis
+- `ToolCard` — reusable spend input card for each AI tool
+- `AuditForm` — parent state container for audit data and persistence
+
+### Persistence Layer
+
+Audit sessions are persisted using browser localStorage to ensure form state survives page refreshes without requiring authentication.
+
 ### AI
 - Anthropic API for personalized audit summaries
 
